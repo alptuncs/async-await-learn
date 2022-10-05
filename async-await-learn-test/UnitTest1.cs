@@ -1,16 +1,15 @@
-namespace async_await_learn_test
-{
-    public class Tests
-    {
-        [SetUp]
-        public void Setup()
-        {
-        }
+namespace async_await_learn_test;
 
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
+public class Tests
+{
+    [SetUp]
+    public void Setup()
+    {
+    }
+
+    [Test]
+    public void Test1()
+    {
+        Assert.Pass();
     }
 }

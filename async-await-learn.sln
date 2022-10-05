@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async-await-learn", "async-await-learn\async-await-learn.csproj", "{D59410A8-B33E-41A6-91A6-9181AD7F89B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async-await-learn", "async-await-learn\async-await-learn.csproj", "{1E52E014-76EB-4EE4-9654-16CF3A0E3BA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "async-await-learn-test", "async-await-learn-test\async-await-learn-test.csproj", "{41B1FCC5-86D0-4E81-B6E4-D146871EEBFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D59410A8-B33E-41A6-91A6-9181AD7F89B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D59410A8-B33E-41A6-91A6-9181AD7F89B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D59410A8-B33E-41A6-91A6-9181AD7F89B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D59410A8-B33E-41A6-91A6-9181AD7F89B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E52E014-76EB-4EE4-9654-16CF3A0E3BA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E52E014-76EB-4EE4-9654-16CF3A0E3BA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E52E014-76EB-4EE4-9654-16CF3A0E3BA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E52E014-76EB-4EE4-9654-16CF3A0E3BA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B1FCC5-86D0-4E81-B6E4-D146871EEBFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B1FCC5-86D0-4E81-B6E4-D146871EEBFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B1FCC5-86D0-4E81-B6E4-D146871EEBFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B1FCC5-86D0-4E81-B6E4-D146871EEBFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
