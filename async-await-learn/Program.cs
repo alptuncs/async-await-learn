@@ -34,7 +34,7 @@
 //random.Wait();
 
 await AddWithTask();
-await Add();
+Add();
 
 //AddAsynchronous();
 //AddWithTask();
