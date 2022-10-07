@@ -9,36 +9,66 @@ public class Chef
 
     }
 
-    public async void PrepareDinner()
+    public void PrepareDinner()
     {
+        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
         Console.WriteLine("Preparing dinner...");
-        Thread.Sleep(3000);
-        await GetProducts();
-    }
+        Task.Delay(300).Wait();
 
-    public Task GetProducts()
-    {
-        var task = new Task(() =>
-        {
-            Console.WriteLine("Getting products...");
-            Thread.Sleep(3000);
-            Cook();
-        });
+        Console.WriteLine("Getting products...");
+        Task.Delay(300).Wait();
 
-        task.Start();
-        return task;
-    }
-
-    public void Cook()
-    {
         Console.WriteLine("Cooking dinner...");
-        Thread.Sleep(5000);
-        Serve();
-    }
+        Task.Delay(500).Wait();
 
-    public void Serve()
-    {
+        Task.Delay(500).Wait();
         Console.WriteLine("Dinner is served...");
         Complete = true;
+        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+    }
+
+    public async Task PrepareDinnerAsync()
+    {
+        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+        Console.WriteLine("Preparing dinner...");
+        await Task.Delay(300);
+
+        Console.WriteLine("Getting products...");
+        await Task.Delay(300);
+
+        Console.WriteLine("Cooking dinner...");
+        await Task.Delay(500);
+
+        await Task.Delay(500);
+        Console.WriteLine("Dinner is served...");
+        Complete = true;
+        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+    }
+
+    public Task PrepareDinnerContinueWith()
+    {
+        return Task.Delay(10).ContinueWith(t =>
+         {
+             Console.WriteLine("Preparing dinner...");
+             Thread.Sleep(3000);
+
+             Task.Delay(10).ContinueWith(t1 =>
+             {
+                 Console.WriteLine("Getting products...");
+                 Thread.Sleep(3000);
+
+                 Task.Delay(10).ContinueWith(t2 =>
+                 {
+                     Console.WriteLine("Cooking dinner...");
+                     Thread.Sleep(5000);
+                     Task.Delay(10).ContinueWith(t3 =>
+                     {
+                         Thread.Sleep(5000);
+                         Console.WriteLine("Dinner is served...");
+                         Complete = true;
+                     });
+                 });
+             });
+         });
     }
 }

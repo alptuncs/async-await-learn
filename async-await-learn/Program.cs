@@ -4,6 +4,10 @@ var chef = new Chef();
 
 chef.PrepareDinner();
 
+await chef.PrepareDinnerAsync();
+
+//chef.PrepareDinnerContinueWith();
+
 while (chef.Complete != true)
 {
     Console.WriteLine("Still Working...");
